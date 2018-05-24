@@ -1,20 +1,20 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>lawyer</title><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css integrity=sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.12/css/all.css integrity=sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9 crossorigin=anonymous><link rel=stylesheet href=css/style.css><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js></script><link href=/static/css/app.07976e886639ba6c1d235a405831e6f3.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.690af568dc446079a841.js></script><script type=text/javascript src=/static/js/app.bb9af721f004cae5c3ff.js></script></body><script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js integrity=sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js integrity=sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T crossorigin=anonymous></script><script>//fix navigation after 200px
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>lawyer</title><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css integrity=sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.12/css/all.css integrity=sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9 crossorigin=anonymous><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js></script><link href=/static/css/app.1abf1950c30f03455f9d3d421a570b5f.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.690af568dc446079a841.js></script><script type=text/javascript src=/static/js/app.08cc5e97f8ef545d2c5e.js></script></body><script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js integrity=sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 crossorigin=anonymous></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js integrity=sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T crossorigin=anonymous></script><script>//fix navigation after 200px
+  var menu = document.getElementById('navigation');
+  window.onscroll = function(){
+    if (window.pageYOffset > 100){
+      menu.classList.add('bg-white','shadow-sm');
+      $('#top').removeClass('collapse');
+    } else {
+      menu.classList.remove('bg-white','shadow-sm');
+      $('#top').addClass('collapse');
+    };
+  };</script><script>//Scroll to anchor if you click link
 
-var menu = document.getElementById('navigation');
-window.onscroll = function(){
-  if (window.pageYOffset > 100){
-    menu.classList.add('bg-white','shadow-sm');
-    $('#top').removeClass('collapse');
-  } else {
-    menu.classList.remove('bg-white','shadow-sm');
-    $('#top').addClass('collapse');
-  };
-};</script><script>//Scroll to anchor if you click link
+  $("a").on('click', function() {
+    $('.navbar-collapse').removeClass('show');
+    var hash = this.hash;
+    $('html, body').animate({scrollTop: $(hash).offset().top - 70}, 800);
+  });</script><script>//date
 
-$("a").on('click', function() {
-  var hash = this.hash;
-  $('html, body').animate({scrollTop: $(hash).offset().top - 70}, 800);
-});</script><script>//date
-
-var date = new Date();
-document.getElementById("copyright").innerHTML = "\u00A9 " + date.getFullYear() + " Artur Khabirov <a href='https://github.com/Goolpe' target='_blank'>Github</a>";</script></html>
+  var date = new Date();
+  document.getElementById("copyright").innerHTML = "\u00A9 " + date.getFullYear() + " Artur Khabirov <a href='https://github.com/Goolpe' target='_blank'>Github</a>";</script></html>
