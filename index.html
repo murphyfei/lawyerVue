@@ -30,7 +30,7 @@
   <script>
   //Scroll to anchor if you click link
 
-  $("a").on('click', function() {
+  $("a[name='scroll_a']").on('click', function() {
     $('.navbar-collapse').removeClass('show');
     var hash = this.hash;
     $('html, body').animate({scrollTop: $(hash).offset().top - 70}, 800);
@@ -40,7 +40,7 @@
   //date
 
   var date = new Date();
-  document.getElementById("copyright").innerHTML = "\u00A9 " + date.getFullYear() + "  <a href='https://www.murphyslaw.cn' target='_blank'>Murphy</a>";
+  document.getElementById("copyright").innerHTML = "\u00A9 " + date.getFullYear() +"\u00A9 "+"<a href='https://www.murphyslaw.cn' target='_blank'>Murphy</a>";
   </script>
 
 </html>

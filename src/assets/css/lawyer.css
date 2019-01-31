@@ -1,0 +1,50 @@
+#head-name {
+  padding-top: 100px;
+}
+
+#home {
+  background-image: url(../../../static/images/0-header.jpeg);
+  background-position: 0px -150px;
+  height: 500px;
+}
+
+#navigation {
+  background-color: #fff;
+}
+
+#top {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 999;
+}
+
+@media (min-width: 992px) {
+  #home {
+    height: 100vh;
+    z-index: 999;
+  }
+}
+@media (min-width: 992px) {
+  #home {
+    height: 100vh;
+  }
+  #home #head-name {
+    padding-top: 200px;
+  }
+
+  section h5 {
+    font-size: 2rem;
+  }
+
+  #navigation {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  #top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+  }
+}

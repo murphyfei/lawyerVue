@@ -4,26 +4,26 @@
     <div class="container">
       <div id="navigation" class="fixed-top">
         <nav class="container navbar navbar-light navbar-expand-lg pt-4 pb-4">
-          <a href="#home" class="navbar-brand">XXX律所</a>
+          <a name="scroll_a" href="#home" class="navbar-brand">XXX律所</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                   <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
               <li class="navbar-item">
-                <a class="nav-link" href="#home">首页</a>
+                <a name="scroll_a" class="nav-link" href="#home">首页</a>
               </li>
               <li class="navbar-item">
-                <a class="nav-link" href="#about">关于我们</a>
+                <a name="scroll_a" class="nav-link" href="#about">关于我们</a>
               </li>
               <li class="navbar-item">
-                <a class="nav-link" href="#practice">社会动态</a>
+                <a name="scroll_a" class="nav-link" href="#practice">社会动态</a>
               </li>
               <li class="navbar-item">
-                <a class="nav-link" href="#team">服务团队</a>
+                <a name="scroll_a" class="nav-link" href="#team">服务团队</a>
               </li>
               <li class="navbar-item">
-                <button class=" btn btn-outline-success">登录</button>
+                <a class=" btn btn-outline-success" href="#home"  @click="login">登录</a>
               </li>
             </ul>
           </div>
@@ -35,7 +35,7 @@
         <strong>律所</strong>
       </h1>
       <p class="display-4">让 人 人 都 有 律 师</p>
-      <a href="#contacts" class="btn btn-lg mt-3 btn-outline-success">联系我们</a>
+      <a name="scroll_a" href="#contacts" class="btn btn-lg mt-3 btn-outline-success">联系我们</a>
     </div>
   </header>
 
@@ -176,16 +176,29 @@
     </div>
   </footer>
 
-<!-- Button top -->
-  <div id="top" class="collapse"><a href="#home"><i class="fas fa-chevron-up fa-3x text-secondary"></i></a></div>
-<!--  -->
+  <!-- Button top -->
+  <div id="top" class="collapse"><a name="scroll_a" href="#home"><i class="fas fa-chevron-up fa-3x text-secondary"></i></a></div>
+    <!-- login modal -->
+    <login_dialog :modal="modal" v-on:closeDg="closeDg"></login_dialog>
   </div>
 </template>
 
 <script>
+  import login_dialog from "./dialog/login-dialog.vue";
 export default {
+  components: {login_dialog},
   data () {
     return {
+      modal: false,
+    }
+  },
+  methods:{
+    login(){
+      this.modal = true;
+    },
+    closeDg (childValue) {
+      // childValue就是子组件传过来的值
+      this.modal = childValue
     }
   }
 }
@@ -193,57 +206,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#head-name {
-  padding-top: 100px;
-}
-
-#home {
-  background-image: url(../assets/0-header.jpeg);
-  background-position: 0px -150px;
-  height: 500px;
-}
-
-#navigation {
-  background-color: #fff;
-}
-
-#top {
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
-  z-index: 999;
-}
-
-@media (min-width: 992px) {
-  #home {
-    height: 100vh;
-    z-index: 999;
-  }
-}
-@media (min-width: 992px) {
-  #home {
-    height: 100vh;
-  }
-  #home #head-name {
-    padding-top: 200px;
-  }
-
-  section h5 {
-    font-size: 2rem;
-  }
-
-  #navigation {
-    background: rgba(0, 0, 0, 0);
-  }
-
-  #top {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    z-index: 999;
-  }
-}
-
+  @import "../assets/css/lawyer.css";
 /*# sourceMappingURL=style.css.map */
-
 </style>
