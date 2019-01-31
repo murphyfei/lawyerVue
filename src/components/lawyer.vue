@@ -4,26 +4,26 @@
     <div class="container">
       <div id="navigation" class="fixed-top">
         <nav class="container navbar navbar-light navbar-expand-lg pt-4 pb-4">
-          <a href="#home" class="navbar-brand">Pravo</a>  
+          <a href="#home" class="navbar-brand">XXX律所</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                   <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
               <li class="navbar-item">
-                <a class="nav-link" href="#home">ГЛАВНАЯ</a>
+                <a class="nav-link" href="#home">首页</a>
               </li>
               <li class="navbar-item">
-                <a class="nav-link" href="#about">О КОМПАНИИ</a>
+                <a class="nav-link" href="#about">关于我们</a>
               </li>
               <li class="navbar-item">
-                <a class="nav-link" href="#practice">ПРАКТИКА</a>
+                <a class="nav-link" href="#practice">社会动态</a>
               </li>
               <li class="navbar-item">
-                <a class="nav-link" href="#team">НАША КОМАНДА</a>
+                <a class="nav-link" href="#team">服务团队</a>
               </li>
               <li class="navbar-item">
-                <a class=" btn btn-outline-success" href="#contacts">КОНТАКТЫ</a>
+                <button class=" btn btn-outline-success">登录</button>
               </li>
             </ul>
           </div>
@@ -32,13 +32,13 @@
     </div>
     <div id="head-name" class="text-center">
       <h1 class="display-1">
-        <strong>ПРАВО</strong>
+        <strong>律所</strong>
       </h1>
-      <p class="display-4">Юридическая компания</p>
-      <a href="#contacts" class="btn btn-lg mt-3 btn-outline-success">Бесплатная консультация</a>
+      <p class="display-4">让 人 人 都 有 律 师</p>
+      <a href="#contacts" class="btn btn-lg mt-3 btn-outline-success">联系我们</a>
     </div>
   </header>
-  
+
   <!--"About Company"-->
   <section id="about">
     <div class="container">
@@ -51,7 +51,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--"Practice"-->
   <section id="practice">
     <div class="container pb-5">
@@ -169,7 +169,7 @@
       </div>
     </div>
   </section>
-  
+
   <footer class="bg-light">
     <div class="container">
       <p class="text-center text-dark pt-5 pb-5" id="copyright"></p>
