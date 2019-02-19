@@ -13,7 +13,7 @@
         </Form-item>
         <Form-item prop="password" style="width:100%;">
           <Input type="password" v-model="formInline.password" placeholder="Password">
-          <Icon type="ios-locked-outline" slot="prepend"></Icon>
+          <Icon type="checkmark" slot="prepend"></Icon>
           </Input>
         </Form-item>
         <Form-item style="width:100%;">
